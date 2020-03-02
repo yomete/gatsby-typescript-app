@@ -16,41 +16,41 @@ const Layout = ({ location, title, children }: Props) => {
   if (location.pathname === rootPath) {
     header = (
       <h1
-        style={{
+        style={ {
           ...scale(1.5),
           marginBottom: rhythm(1.5),
           marginTop: 0,
-        }}
+        } }
       >
         <Link
-          style={{
+          style={ {
             boxShadow: `none`,
             textDecoration: `none`,
             color: `inherit`,
-          }}
-          to={`/`}
+          } }
+          to={ `/` }
         >
-          {title}
+          { title }
         </Link>
       </h1>
     )
   } else {
     header = (
       <h3
-        style={{
+        style={ {
           fontFamily: `Montserrat, sans-serif`,
           marginTop: 0,
-        }}
+        } }
       >
         <Link
-          style={{
+          style={ {
             boxShadow: `none`,
             textDecoration: `none`,
             color: `inherit`,
-          }}
-          to={`/`}
+          } }
+          to={ `/` }
         >
-          {title}
+          { title }
         </Link>
       </h3>
     )
@@ -58,18 +58,18 @@ const Layout = ({ location, title, children }: Props) => {
 
   return (
     <div
-      style={{
+      style={ {
         marginLeft: `auto`,
         marginRight: `auto`,
         maxWidth: rhythm(24),
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-      }}
+      } }
     >
-      <header>{header}</header>
-      <main>{children}</main>
+      <header>{ header }</header>
+      <main>{ children }</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
+        © { new Date().getFullYear() }, Built with
+        { ` ` }
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>
     </div>
